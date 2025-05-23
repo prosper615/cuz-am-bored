@@ -2,13 +2,10 @@
 
 
 
-console.log("Am very bored right now")
 
+// Note: This is a simplified demonstration and not a full implementation of anonymous routing.
 
-
-// Pls don't mind i have so much comments
-
-
+// I have  extensive comments for clarity and learning purposes.
 
 
 
@@ -35,16 +32,22 @@ console.log("Am very bored right now")
 
 
 
+/**
+ * So I imagine I want to send a message to someone without them knowing it's me (i.e. anonymous routing).
+ *
+ * What I could do is use a proxy (someone who is an intermediary which doesn't actually erase anonymity).
+ *
+ * So in summary am gonna use a multiple mixing service (multiple proxies).
+ */
 
-// so i  imagine i want to send a message to my someone without the  knowing its me
-
-// what i could do is use a proxy ( someone who is an intermediary which doesnt actually erase anonimity)
-
-// So in summary am gonna use a multiple mixing service ( multiple proxies)
 
 
 
-// Here am gonna use 3 proxies
+
+
+
+
+function anon (){
 
 
 function onioning( k : number | string, m: string ){
@@ -119,14 +122,53 @@ return onetimepader
 }
 
 
+return onioning
+
+
+}
 
 
 
-console.log( onioning(1011, "1011"))
 
 
 
 
+
+
+/**
+ * Now am kinda introducing the proxies (intermediaries).
+ *
+ * Here am gonna use 3 proxies.
+ *
+ * What just happens is that the sender exchanges a key with each proxy.
+ *
+ * Then message is encrypted with the first, second uses his/her key to encrypt the result of the first proxy, and so on.
+ */
+
+
+const assignproxy = anon()
+
+const first_proxy = assignproxy(101, "101")
+
+const second_proxy = assignproxy(101101, first_proxy.join(" ") )
+
+const third_proxy = assignproxy(1000001, second_proxy.join(" " ) )
+
+console.log( first_proxy , second_proxy , third_proxy)
+
+
+
+
+/**
+ * So the final message is delivered to the destination without the recipient knowing the source.
+ *
+ * but this can be gamed in the case of collusion among the parties who serve as proxies amongst other things.
+ *
+ * Yeah this was a form of digressing on what I was going down on, hope when I get back there is a flow.
+ *
+ * That's all for now. Just experimenting and learning as I go.
+
+ */
 
 
 
