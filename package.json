@@ -38,10 +38,10 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-"dev": "nodemon bored.js"
+"dev": "nodemon dist"
 
   },
-  "author": "",
+  "author": "MT",
   "license": "ISC",
-  "description": ""
+  "description": "cuz am bored"
 }
