@@ -47,7 +47,7 @@
 
 
 
-function anon (){
+  export function anon (){
 
 
 function onioning( k : number | string, m: string ){
@@ -157,6 +157,15 @@ const third_proxy = assignproxy(1000001, second_proxy.join(" " ) )
 console.log( first_proxy , second_proxy , third_proxy)
 
 
+const ftohex = Array.from(first_proxy).map( b=> b.toString(8) ).join(" ")
+
+
+console.log( ftohex)
+
+
+
+
+
 
 
 /**
@@ -173,7 +182,11 @@ console.log( first_proxy , second_proxy , third_proxy)
 
 
  
+// Yeah one good solution to to defend aganist gaming the system is for people to share keys without revealing identity
 
+// And zk is gonna be likely applied ( i.e is what i think from my little knowlege)
+
+// Pardon me i guess with zk is it not better to interact directly since your identity is hidden ?
 
 
 

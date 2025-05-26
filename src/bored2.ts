@@ -7,8 +7,6 @@
 
 
 
-
-
     function checkifprimitive ( theprime: number, thegenerator: number) : boolean {
     
     let InitialIterating = 1   
@@ -60,7 +58,7 @@
 
 
 
- function trial_division_algo(thenum: number) : boolean{
+    function trial_division_algo(thenum: number) : boolean{
 
     
     let Trail =  thenum 
@@ -225,14 +223,6 @@ let Alice_generator = Alices.choosegeneartor
 
  const Alice_secretkey =   BigInt(Bob_calculation ) **   BigInt( Alice_secretnumber ) %   BigInt(Alice_prime)
 
- console.log(Bob_secretkey)
-
- console.log( Alice_secretkey)
-
-
-
-
-
  // Now both should get the same secret key which both would use for their encryption algorithm
 
  
@@ -241,9 +231,9 @@ let Alice_generator = Alices.choosegeneartor
 
 
 
+// Now am gonna export  trial_division_algo so i could use it to test for primality  elsewhere instead of rewritting the code
 
-
-
+export { trial_division_algo as primalitychecker }
 
 
 
